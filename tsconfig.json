@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "noEmit": true,
+        "strict": true,
+        "isolatedModules": false,
+        "esModuleInterop": true,
+        "jsx": "react",
+        "sourceMap": true,
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "sourceRoot": "./src",
+        "paths": {
+            "@/*": ["./src/*"],
+            "*": ["./node_modules/@types/*"]
+        }
+    },
+    "include": ["**/*", "*"],
+    "exclude": ["node_modules"]
+}
