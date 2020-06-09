@@ -21,7 +21,27 @@ module.exports = {
                     'style-loader',
                     'css-loader',
                     'postcss-loader',
-                    'less-loader'
+                    {
+                        loader: 'less-loader',
+                        options: {
+                            lessOptions: {
+                                paths: [path.resolve(__dirname, 'assets')],
+                                rewriteUrls: true
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.ttf/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
+                    }
                 ]
             },
             {

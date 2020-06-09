@@ -5,6 +5,8 @@ const path = require('path');
 const common = require('./webpack.config.common.js');
 const configureDevServer = require('./webpack-dev-server.config.js');
 
+const packageJson = require('./package.json');
+
 module.exports = merge(common, {
     mode: 'development',
     plugins: [
@@ -14,7 +16,7 @@ module.exports = merge(common, {
     devServer: {
         contentBase: path.resolve('local'),
         hot: true,
-        port: 8081,
+        port: packageJson.devPort,
         before: configureDevServer
     }
 });
