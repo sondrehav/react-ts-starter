@@ -1,69 +1,67 @@
 {
-  "name": "boilerplate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "devPort": 8080,
-  "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.prod.js",
-    "test": "jest"
-  },
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "7.10.2",
-    "@babel/plugin-proposal-class-properties": "7.10.1",
-    "@babel/plugin-proposal-object-rest-spread": "7.10.1",
-    "@babel/plugin-transform-runtime": "7.10.1",
-    "@babel/preset-env": "7.10.2",
-    "@babel/preset-react": "7.10.1",
-    "@babel/preset-typescript": "7.10.1",
-    "@babel/runtime": "7.10.2",
-    "@types/react": "16.9.35",
-    "@types/react-dom": "16.9.8",
-    "@types/react-router-dom": "5.1.5",
-    "autoprefixer": "9.8.0",
-    "babel-loader": "8.1.0",
-    "clean-webpack-plugin": "3.0.0",
-    "cross-env": "7.0.2",
-    "css-loader": "3.5.3",
-    "express": "4.17.1",
-    "file-loader": "^6.0.0",
-    "husky": "^4.2.5",
-    "jest": "26.0.1",
-    "less": "3.11.3",
-    "less-loader": "6.1.0",
-    "path": "0.12.7",
-    "postcss-loader": "3.0.0",
-    "prettier": "2.0.5",
-    "pretty-quick": "2.0.1",
-    "style-loader": "1.2.1",
-    "svg-url-loader": "6.0.0",
-    "typescript": "3.9.5",
-    "webpack": "4.43.0",
-    "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.11.0",
-    "webpack-merge": "4.2.2",
-    "yargs": "15.3.1"
-  },
-  "dependencies": {
-    "bootstrap-less-port": "^2.3.1",
-    "classnames": "2.2.6",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-router-dom": "5.2.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick & npm test"
-    }
-  },
+    "name": "boilerplate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "devPort": 8080,
+    "scripts": {
+        "start": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config.dev.js",
+        "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.prod.js",
+        "test": "jest"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "7.10.2",
+        "@babel/plugin-proposal-class-properties": "7.10.1",
+        "@babel/plugin-proposal-object-rest-spread": "7.10.1",
+        "@babel/plugin-transform-runtime": "7.10.1",
+        "@babel/preset-env": "7.10.2",
+        "@babel/preset-react": "7.10.1",
+        "@babel/preset-typescript": "7.10.1",
+        "@babel/runtime": "7.10.2",
+        "@types/react": "16.9.35",
+        "@types/react-dom": "16.9.8",
+        "@types/react-router-dom": "5.1.5",
+        "autoprefixer": "9.8.0",
+        "babel-loader": "8.1.0",
+        "clean-webpack-plugin": "3.0.0",
+        "cross-env": "7.0.2",
+        "css-loader": "3.5.3",
+        "express": "4.17.1",
+        "file-loader": "^6.0.0",
+        "husky": "^4.2.5",
+        "jest": "26.0.1",
+        "less": "3.11.3",
+        "less-loader": "6.1.0",
+        "path": "0.12.7",
+        "postcss-loader": "3.0.0",
+        "prettier": "2.0.5",
+        "pretty-quick": "2.0.1",
+        "style-loader": "1.2.1",
+        "svg-url-loader": "6.0.0",
+        "typescript": "3.9.5",
+        "webpack": "4.43.0",
+        "webpack-cli": "3.3.11",
+        "webpack-dev-server": "3.11.0",
+        "webpack-merge": "4.2.2",
+        "yargs": "15.3.1"
+    },
+    "dependencies": {
+        "bootstrap-less-port": "^2.3.1",
+        "classnames": "2.2.6",
+        "react": "16.13.1",
+        "react-dom": "16.13.1",
+        "react-router-dom": "5.2.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick & npm test"
+        }
+    },
     "prettier": {
-
-    "trailingComma": "es5",
-    "tabWidth": 4,
-    "semi": false,
-    "singleQuote": true
-
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
     }
 }

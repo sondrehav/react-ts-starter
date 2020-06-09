@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
-const { argv } = require('yargs');
+const webpack = require('webpack')
+const path = require('path')
+const { argv } = require('yargs')
 
-const packageJson = require('./package.json');
+const packageJson = require('./package.json')
 
 module.exports = {
     devtool: 'source-map',
@@ -12,7 +12,7 @@ module.exports = {
             {
                 test: /\.(ts|tsx|js|jsx)$/,
                 include: /src/,
-                use: ['babel-loader']
+                use: ['babel-loader'],
             },
             {
                 test: /\.less/,
@@ -26,11 +26,11 @@ module.exports = {
                         options: {
                             lessOptions: {
                                 paths: [path.resolve(__dirname, 'assets')],
-                                rewriteUrls: true
-                            }
-                        }
-                    }
-                ]
+                                rewriteUrls: true,
+                            },
+                        },
+                    },
+                ],
             },
             {
                 test: /\.ttf/,
@@ -39,40 +39,40 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'fonts/'
-                        }
-                    }
-                ]
+                            outputPath: 'fonts/',
+                        },
+                    },
+                ],
             },
             {
                 test: /\.css/,
                 include: [/src/],
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.svg$/,
                 include: /src/,
-                use: ['svg-url-loader']
-            }
-        ]
+                use: ['svg-url-loader'],
+            },
+        ],
     },
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         modules: ['./node_modules/', './src/', './assets'],
         alias: {
-            '@': path.resolve(__dirname, 'src/')
-        }
+            '@': path.resolve(__dirname, 'src/'),
+        },
     },
     output: {
         path: path.resolve('dist'),
         publicPath: '/',
         filename: `${packageJson.name}.js`,
-        chunkFilename: `${packageJson.name}.[id].js`
+        chunkFilename: `${packageJson.name}.[id].js`,
     },
     plugins: [
         new webpack.EnvironmentPlugin({
             CLIENT_VERSION: argv.buildVersion || 'no_specified',
-            CLIENT_NAME: packageJson.name
-        })
-    ]
-};
+            CLIENT_NAME: packageJson.name,
+        }),
+    ],
+}
